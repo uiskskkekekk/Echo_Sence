@@ -61,6 +61,7 @@ TEMPLATES = [
 			STATIC_PATH,
 			os.path.join(STATIC_PATH, 'template'),
 			os.path.join(STATIC_PATH, 'echo_sence'),
+            BASE_DIR / "static" / "Homepage",
 		],
 
         'APP_DIRS': True,
