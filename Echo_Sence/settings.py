@@ -58,9 +58,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-			STATIC_PATH,
-			os.path.join(STATIC_PATH, 'template'),
-			os.path.join(STATIC_PATH, 'echo_sence'),
+			# STATIC_PATH,
+			# os.path.join(STATIC_PATH, 'template'),
+			# os.path.join(STATIC_PATH, 'echo_sence'),
+            BASE_DIR / "static" / "template",
             BASE_DIR / "static" / "Homepage",
 		],
 
