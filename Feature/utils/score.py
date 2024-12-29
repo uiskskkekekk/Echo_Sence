@@ -1,7 +1,6 @@
 import librosa
-import matplotlib.pyplot as plt
 import numpy as np
-from typing import Optional, Callable, Union
+from typing import Optional, Callable
 from .utils import AudioTools, AudioFeatures
 
 class Audio:

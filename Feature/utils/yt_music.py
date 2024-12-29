@@ -2,6 +2,7 @@ import yt_dlp
 import os
 from pydub import AudioSegment
 from pydub.utils import which
+from datetime import datetime
 
 AudioSegment.converter = which("ffmpeg") 
 
@@ -66,11 +67,21 @@ class Downloader:
         with yt_dlp.YoutubeDL(opts) as ydl:
             # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
             info = ydl.extract_info(yt_link, False)
-            return {
+            video_id = info.get("id")
+            ts = info.get("timestamp")
+            dt = datetime.fromtimestamp(ts) if ts is not None else None
+            return dict({
+                "id": video_id,
                 "title": info.get("title"),
-                "author": info.get("uploader")
-            }
-        return None
+                "author_id": info.get("uploader_id"),
+                "author": info.get("uploader"),
+                "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
+                "preview_url": info.get("url"),
+                "upload_time": dt,
+                "upload_timestamp": info.get("timestamp"),
+                "view_count": info.get("view_count"),
+                "like_count": info.get("like_count")
+            })
         
 
         

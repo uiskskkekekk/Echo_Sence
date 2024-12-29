@@ -1,9 +1,14 @@
+import os
+import absl.logging
 import warnings
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+absl.logging.set_verbosity(absl.logging.ERROR)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 import librosa
 import numpy as np
-import os
 import ast
 import sys
 
