@@ -61,6 +61,7 @@ TEMPLATES = [
 			STATIC_PATH,
 			os.path.join(STATIC_PATH, 'template'),
 			os.path.join(STATIC_PATH, 'echo_sence'),
+            os.path.join(STATIC_PATH, 'feature'),
 		],
 
         'APP_DIRS': True,
@@ -132,3 +133,48 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 USE_L10N = True
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# logger settings
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{asctime} | {name}.{module} | [{levelname}] {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{name}.{module} | [{levelname}] {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'disabled': {  # 禁用的 Logger
+            'handlers': [],
+            'level': 'CRITICAL',
+            'propagate': False,
+        },
+        'Feature': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
