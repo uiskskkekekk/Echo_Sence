@@ -46,8 +46,7 @@ class Downloader:
                     to = os.path.dirname(abspath)
                 return cls.m4a_to_mp3(abspath, to)
         except Exception as e:
-            logger.error(str(e))
-        return None
+            raise e
             
     @classmethod
     def m4a_to_mp3(cls, input_file: str, output_path: str=None):
@@ -76,24 +75,27 @@ class Downloader:
             }],
             'quiet': True
         }
-        with yt_dlp.YoutubeDL(opts) as ydl:
-            # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
-            info = ydl.extract_info(yt_link, False)
-            video_id = info.get("id")
-            ts = info.get("timestamp")
-            dt = datetime.fromtimestamp(ts) if ts is not None else None
-            return dict({
-                "id": video_id,
-                "title": info.get("title"),
-                "author_id": info.get("uploader_id"),
-                "author": info.get("uploader"),
-                "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
-                "preview_url": info.get("url"),
-                "upload_time": dt,
-                "upload_timestamp": info.get("timestamp"),
-                "view_count": info.get("view_count"),
-                "like_count": info.get("like_count")
-            })
+        try:
+            with yt_dlp.YoutubeDL(opts) as ydl:
+                # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
+                info = ydl.extract_info(yt_link, False)
+                video_id = info.get("id")
+                ts = info.get("timestamp")
+                dt = datetime.fromtimestamp(ts) if ts is not None else None
+                return dict({
+                    "id": video_id,
+                    "title": info.get("title"),
+                    "author_id": info.get("uploader_id"),
+                    "author": info.get("uploader"),
+                    "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
+                    "preview_url": info.get("url"),
+                    "upload_time": dt,
+                    "upload_timestamp": info.get("timestamp"),
+                    "view_count": info.get("view_count"),
+                    "like_count": info.get("like_count")
+                })
+        except Exception as e:
+            raise e
         
 
         
