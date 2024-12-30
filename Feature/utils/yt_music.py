@@ -33,7 +33,8 @@ class Downloader:
                 [[0.0, 30.0]]
             ),
             'no_warnings': True,
-            'no_progress': True
+            'no_progress': True,
+            'noplaylist': True
         }
         try:
             with yt_dlp.YoutubeDL(opts) as ydl:
