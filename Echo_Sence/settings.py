@@ -164,7 +164,7 @@ LOGGING = {
         'django': {
             'handlers': ['console'],
             'level': 'INFO',
-            'propagate': True,
+            'propagate': False,
         },
         'disabled': {  # 禁用的 Logger
             'handlers': [],
