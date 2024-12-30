@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Jost", Arial, sans-serif;
+    font-style: normal;
     background-color: #121212;
     color: #ffffff;
     display: flex;
@@ -30,14 +31,14 @@ body {
 
 .title-name {
     transform: translateY(-40%);
-    font-size: 3.7em;
+    font-size: 4em;
     user-select: none;
     text-decoration: none;
 }
 
 .circle-container {
     position: relative;
-    width: 900px;
+    width: 940px;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -45,14 +46,15 @@ body {
 }
 
 .circle-container .circle-from{
+    transform: translateY(-5%);
     width: 100%;
     height: 100%;
 }
 
 .circle {
     position: absolute;
-    width: 360px;
-    height: 90%;
+    width: 400px;
+    height: 100%;
     border-radius: 50%;
     border: 10px solid #121212; /* 添加邊框 */
     overflow: hidden;
@@ -79,14 +81,14 @@ body {
 .circle-2 {
     background-color: #ff6f00;
     top: 0;
-    left: 250px; /* 重叠形成月亮形状 */
+    left: 270px; /* 重叠形成月亮形状 */
     z-index: 20; /* 圆形2覆盖在圆形1之上 */
 }
 
 .circle-3 {
     background-color: #333;
     top: 0;
-    left: 500px;
+    left: 540px;
     z-index: 30;
 }
 
