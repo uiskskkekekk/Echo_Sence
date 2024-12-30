@@ -38,14 +38,14 @@ class FeatureExtractor:
         res = min_max_scaling(res)
         return res
     
-    def extract(self, yt_link: str, format: Literal["str", "float32"]="str"):
+    def extract(self, yt_link: str) -> np.ndarray:
         if not self.is_loaded: return None
         
         filepath = self._yt2mp3(yt_link)
         if filepath is not None:
             features = self._get_features(filepath)
             os.remove(filepath)
-            return features if format == "float32" else ",".join(map(str, features))
+            return features
         return None
 
     def rebuild_feature(self, features_str: str):
