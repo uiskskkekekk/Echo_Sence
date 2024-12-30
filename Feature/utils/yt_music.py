@@ -80,23 +80,67 @@ class Downloader:
             with yt_dlp.YoutubeDL(opts) as ydl:
                 # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
                 info = ydl.extract_info(yt_link, False)
-                video_id = info.get("id")
-                ts = info.get("timestamp")
-                dt = datetime.fromtimestamp(ts) if ts is not None else None
-                return dict({
-                    "id": video_id,
-                    "title": info.get("title"),
-                    "author_id": info.get("uploader_id"),
-                    "author": info.get("uploader"),
-                    "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
-                    "preview_url": info.get("url"),
-                    "upload_time": dt,
-                    "upload_timestamp": info.get("timestamp"),
-                    "view_count": info.get("view_count"),
-                    "like_count": info.get("like_count")
-                })
+                return cls._get_music_info(info)
         except Exception as e:
             raise e
+        
+    @classmethod
+    def get_full_data(cls, url, to=None, quiet=False):
+        home = './data/music/temp' if to is None else os.path.join(to, "temp")
+        opts = {
+            'format': 'm4a/bestaudio/best',
+            'postprocessors': [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'm4a',
+            }],
+            'paths': {
+                'home': home
+            },
+            'outtmpl': {
+                'default': '%(id)s.%(ext)s'
+            },
+            'quiet': quiet,
+            'download_ranges': yt_dlp.utils.download_range_func(
+                [], 
+                [[0.0, 30.0]]
+            ),
+            'no_warnings': True,
+            'no_progress': True,
+            'noplaylist': True
+        }
+        try:
+            with yt_dlp.YoutubeDL(opts) as ydl:
+                info = ydl.extract_info(url, download=True)
+                logger.info("Downloading music...")
+                logger.info(f"Title: {info.get('title')}")
+                filepath = ydl.prepare_filename(info, outtmpl=opts['outtmpl']['default'])
+                abspath = os.path.abspath(filepath)
+                if to is None:
+                    to = os.path.dirname(abspath)
+                return {
+                    "output_path": cls.m4a_to_mp3(abspath, to),
+                    "info": cls._get_music_info(info)
+                }
+        except Exception as e:
+            raise e
+        
+    @classmethod
+    def _get_music_info(cls, info: dict):
+        video_id = info.get("id")
+        ts = info.get("timestamp")
+        dt = datetime.fromtimestamp(ts) if ts is not None else None
+        return dict({
+            "id": video_id,
+            "title": info.get("title"),
+            "author_id": info.get("uploader_id"),
+            "author": info.get("uploader"),
+            "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
+            "preview_url": info.get("url"),
+            "upload_time": dt,
+            "upload_timestamp": info.get("timestamp"),
+            "view_count": info.get("view_count"),
+            "like_count": info.get("like_count")
+        })
         
 
         

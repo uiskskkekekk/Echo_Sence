@@ -47,6 +47,14 @@ class FeatureExtractor:
             os.remove(filepath)
             return features
         return None
+    
+    def extract_from_file(self, filepath):
+        if filepath is not None:
+            features = self._get_features(filepath)
+            os.remove(filepath)
+            return features
+        return None
+        
 
     def rebuild_feature(self, features_str: str):
         return np.array(features_str.split(","), dtype=np.float32)

@@ -73,3 +73,46 @@ def get_info(request: HttpRequest):
         error_id = uuid4()
         logger.error(f"{str(e)} ({error_id})")
         return JsonResponse({"error": "Unknown error.", "error_id": error_id}, status=UNKNOWN_ERROR_NO)
+    
+@csrf_exempt
+def get_full_data(request: HttpRequest):
+    if request.method != 'POST':
+        return JsonResponse({"error": "Only POST method is allowed."}, status=UNSUPPORT_METHOD_ERROR_NO)
+    
+    if not fe.is_loaded: 
+        return JsonResponse(
+            {"error": "The model could not be loaded. Please check the file path or model file integrity."},
+            status=UNKNOWN_ERROR_NO
+        )
+    
+    yt_link = request.POST.get("yt_link")
+    if not yt_link:
+        return JsonResponse({"error": "The 'yt_link' field is required."}, status=FIELD_ERROR_NO)
+    
+    if not Checker.is_yt_link(yt_link):
+        return JsonResponse({"error": "The 'yt_link' field must be a valid Youtube link."}, status=FIELD_ERROR_NO)
+    
+    try:
+        res = Downloader.get_full_data(yt_link, quiet=True)
+        output_path = res.get("output_path")
+        info = res.get("info")
+        
+        if res is None or output_path is None or info is None:
+            return JsonResponse({"error": "Get info failed due to an unknown error."}, status=UNKNOWN_ERROR_NO)
+        
+        feature = fe.extract_from_file(output_path)
+        if feature is None:
+            return JsonResponse({"error": "Feature extraction failed due to an unknown error."}, status=UNKNOWN_ERROR_NO)
+        
+        feature = feature.tolist()
+        return JsonResponse({
+            "feature": {
+                "data": feature,
+                "stringified_data": ",".join(map(str, res))
+            },
+            "info": info
+        })
+    except Exception as e:
+        error_id = uuid4()
+        logger.error(f"{str(e)} ({error_id})")
+        return JsonResponse({"error": "Unknown error.", "error_id": error_id}, status=UNKNOWN_ERROR_NO)
