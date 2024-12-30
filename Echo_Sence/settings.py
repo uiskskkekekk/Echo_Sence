@@ -142,30 +142,31 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{asctime} | {name}.{module} | [{levelname}] {message}',
+            'format': '{asctime} | [{levelname}] {name}.{module}: {message}',
             'style': '{',
         },
         'simple': {
-            'format': '{name}.{module} | [{levelname}] {message}',
+            'format': '[{levelname}] {name}.{module}: {message}',
             'style': '{',
         },
     },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+            'formatter': 'simple'
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': 'debug.log',
             'formatter': 'verbose',
+            'encoding': 'utf-8'
         },
     },
     'loggers': {
         'django': {
             'handlers': ['console'],
             'level': 'INFO',
-            'propagate': True,
+            'propagate': False,
         },
         'disabled': {  # 禁用的 Logger
             'handlers': [],
