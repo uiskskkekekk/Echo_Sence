@@ -27,6 +27,7 @@ body {
     height: 50px;
     font-weight: bold;
     z-index: 40;
+    color: #d48e00;
 }
 
 .title-name {
@@ -63,6 +64,8 @@ body {
     font-weight: bold;
     /* text-align: center; */
     transition: .3s;
+    background-size: cover; /* 使背景圖片填滿圓形 */
+    background-position: center; 
 }
 
 /* .circle-from .circle-1, .circle-2, .circle-3{
@@ -72,22 +75,20 @@ body {
 } */
 
 .circle-1 {
-    background-color: #ffb013;
+    background-color: #d48e00;
     top: 0;
     left: 0;
     z-index: 10;
 }
 
 .circle-2 {
-    background-color: #ff6f00;
-    top: 0;
+    background-image: url('../assets/mgk.jpg');
     left: 270px; /* 重叠形成月亮形状 */
     z-index: 20; /* 圆形2覆盖在圆形1之上 */
 }
 
 .circle-3 {
-    background-color: #333;
-    top: 0;
+    background-image: url('../assets/glaive.jpg');
     left: 540px;
     z-index: 30;
 }
