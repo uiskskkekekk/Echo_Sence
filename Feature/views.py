@@ -37,7 +37,7 @@ def get_feature(request: HttpRequest):
         res = fe.extract(yt_link, format="str")
         if res is None:
             return JsonResponse({"error": "Feature extraction failed due to an unknown error."}, status=500)
-        return JsonResponse({"result": res})
+        return JsonResponse({"data": res})
     except Exception as e:
         error_id = uuid4()
         logger.error(f"{str(e)} ({error_id})")
