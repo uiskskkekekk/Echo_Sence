@@ -3,8 +3,8 @@
 ## Environment Setup
 
 1. **Requirements**:
-   - Python >= 3.12
-   - ffmpeg >= 7.1
+   - Python $\ge$ 3.12
+   - ffmpeg $\ge$ 7.1
 
 2. **Create a Virtual Environment**:
     
