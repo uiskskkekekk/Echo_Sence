@@ -3,8 +3,11 @@ import os
 from pydub import AudioSegment
 from pydub.utils import which
 from datetime import datetime
+import logging
 
 AudioSegment.converter = which("ffmpeg") 
+
+logger = logging.getLogger("Feature")
 
 # https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#embedding-examples
 
@@ -24,34 +27,43 @@ class Downloader:
             'outtmpl': {
                 'default': '%(id)s.%(ext)s'
             },
-            'quiet': quiet
+            'quiet': quiet,
+            'download_ranges': yt_dlp.utils.download_range_func(
+                [], 
+                [[0.0, 30.0]]
+            ),
+            'no_warnings': True,
+            'no_progress': True
         }
         try:
             with yt_dlp.YoutubeDL(opts) as ydl:
                 info = ydl.extract_info(url, download=True)
-                print("Title:", info.get("title"))
+                logger.info("Downloading music...")
+                logger.info(f"Title: {info.get('title')}")
                 filepath = ydl.prepare_filename(info, outtmpl=opts['outtmpl']['default'])
                 abspath = os.path.abspath(filepath)
                 if to is None:
-                    to = abspath
+                    to = os.path.dirname(abspath)
                 return cls.m4a_to_mp3(abspath, to)
-        except:
-            pass
+        except Exception as e:
+            logger.error(str(e))
         return None
             
     @classmethod
     def m4a_to_mp3(cls, input_file: str, output_path: str=None):
-        audio = AudioSegment.from_file(input_file, format="m4a")
-        
         if output_path is None:
             output_path = os.path.abspath("./data/music/download")
-        filename = os.path.basename(input_file).removesuffix(".m4a") + ".mp3"
+        logger.info("Transform .m4a file to .mp3 file...")
+        audio = AudioSegment.from_file(input_file, format="m4a")
         
+        filename = os.path.basename(input_file).removesuffix(".m4a") + ".mp3"
         output_path = os.path.join(output_path, filename)
         
         audio.export(output_path, format="mp3")
-        print(f"[output] {output_path}")
+        logger.info(f"Done! Output path: {os.path.abspath(output_path)}")
+        logger.info(f"Remove file: {os.path.abspath(output_path)}")
         os.remove(input_file)
+        logger.info("Done!")
         return output_path
     
     @classmethod
