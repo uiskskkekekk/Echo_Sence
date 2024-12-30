@@ -141,11 +141,11 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{asctime} | {name}.{module} | [{levelname}] {message}',
+            'format': '{asctime} | [{levelname}] {name}.{module}: {message}',
             'style': '{',
         },
         'simple': {
-            'format': '{name}.{module} | [{levelname}] {message}',
+            'format': '[{levelname}] {name}.{module}: {message}',
             'style': '{',
         },
     },
