@@ -14,30 +14,51 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // 發送 AJAX 請求
-        fetch("/music/upload_music", {
+        const data = {
+            yt_link: youtubeUrl,
+        }
+
+
+        $.ajax({
+            url: "http://127.0.0.1:8000/music/upload_music",
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "X-CSRFToken": getCsrfToken(), // 添加 CSRF Token
             },
-            body: JSON.stringify({ yt_link: youtubeUrl }),
+            data: data,
+            success: (res) => {
+                console.log(res);
+            },
+            error: (res) => {
+                console.error("Error:", res);
+            },
         })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                // 處理服務器的回應
-                console.log(data);
-                alert("YouTube URL has been successfully submitted!");
-            })
-            .catch((error) => {
-                console.error("There was a problem with the fetch operation:", error);
-                alert("An error occurred while submitting the URL.");
-            });
+
+        // 發送 AJAX 請求
+        // fetch("/music/upload_music", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //         "X-CSRFToken": getCsrfToken(), // 添加 CSRF Token
+        //     },
+        //     body: JSON.stringify({ yt_link: youtubeUrl }),
+        // })
+        //     .then((response) => {
+        //         if (!response.ok) {
+        //             throw new Error("Network response was not ok");
+        //         }
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         // 處理服務器的回應
+        //         console.log(data);
+        //         alert("YouTube URL has been successfully submitted!");
+        //     })
+        //     .catch((error) => {
+        //         console.error("There was a problem with the fetch operation:", error);
+        //         alert("An error occurred while submitting the URL.");
+        //     });
     });
 
     // Helper function to get CSRF token
