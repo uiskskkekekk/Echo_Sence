@@ -16,14 +16,12 @@ Upload
 <div class="background-title-container">
     <p>ECHO SENCE</p>
 </div>
-<div class="url-border">
-    <div class="url-container">
-        <form action="/analyze" method="post" class="url-form">
-            <label for="url-input" class="url-label">Enter YouTube URL:</label>
-            <input type="url" id="url-input" name="youtube_url" class="url-input" placeholder="Paste YouTube link here" required>
-            <button type="submit" class="url-submit-btn">Analyze</button>
-        </form>
-    </div>
+<div class="url-container">
+    <form action="/analyze" method="post" class="url-form">
+        <label for="url-input" class="url-label">Enter YouTube URL:</label>
+        <input type="url" id="url-input" name="youtube_url" class="url-input" placeholder="Paste YouTube link here" required>
+        <button type="submit" class="url-submit-btn">Analyze</button>
+    </form>
 </div>
 
 {% endblock body %}
