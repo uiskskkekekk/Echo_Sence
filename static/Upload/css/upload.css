@@ -1,0 +1,88 @@
+body {
+    font-family: "Jost", Arial, sans-serif;
+    font-style: normal;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-title-container {
+    position: absolute;
+    font-size: 14vw;
+    font-family: "Bungee Outline";
+}
+
+.background-title-container p {
+    transform: translateY(-5%);
+    user-select: none;
+    text-decoration: none;
+    /* color: #d48e00; */
+}
+
+.url-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+    border: 5px solid #d48e00;
+    border-radius: 50px;
+    margin-top: 50px;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    z-index: 10;
+    transform: translateY(-45%);
+    box-shadow: 0 0 0 15px #121212; /* 模擬外層白色邊框 */
+}
+
+.url-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    /* max-width: 1000px; */
+    gap: 10px;
+}
+
+.url-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap; /* 禁止換行 */
+}
+
+.url-input {
+    width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #d48e00;
+    border-radius: 50px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.url-input::placeholder {
+    color: #888888;
+}
+
+.url-submit-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #d48e00;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.url-submit-btn:hover {
+    background-color: #f2a300;
+}

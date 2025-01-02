@@ -1,0 +1,92 @@
+body {
+    font-family: "Jost", Arial, sans-serif;
+    font-style: normal;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-title-container {
+    position: absolute;
+    font-size: 14vw;
+    font-family: "Bungee Outline";
+}
+
+.background-title-container p {
+    transform: translateY(-5%);
+    user-select: none;
+    text-decoration: none;
+    /* color: #d48e00; */
+}
+
+
+.analysis-container {
+    padding: 20px;
+    max-width: 800px;
+    background-color: #121212;
+    border: 3px solid #d48e00;
+    border-radius: 30px;
+    z-index: 10;
+    box-shadow: 0 0 0 10px #121212; /* 模擬外層白色邊框 */
+}
+
+.music-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.your-music {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.music-placeholder {
+    width: 300px;
+    height: 50px;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.similar-music {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.thumbnail-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.music-info {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.music-info a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.music-info a:hover {
+    text-decoration: underline;
+}
