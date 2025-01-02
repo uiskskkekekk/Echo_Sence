@@ -1,11 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
-from Music.models import Category, Artist, Music
-from django.utils.http import urlencode
-from Feature.extractor import FeatureExtractor
-from rest_framework.test import APITestCase
+from Music.models import Artist
 from unittest.mock import patch
-import json
 
 class MockResponse:
     def __init__(self, json_data, status_code):
@@ -18,7 +14,6 @@ class MockResponse:
 class AddMusicTest(TestCase):
     def setUp(self):
         # 創建測試類別
-        category = Category.objects.create(name="Rock")
         artist = Artist.objects.create(name="Artist A", url="https://example.com/artist_a")
 
         self.mock_data = {
