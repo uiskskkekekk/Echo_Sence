@@ -3,7 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "homepage.html")
-
-def redirect_homepage(request): 
-    return redirect("/homepage")
+    return render(request, "upload.html")

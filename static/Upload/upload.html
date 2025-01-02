@@ -16,26 +16,14 @@ Upload
 <div class="background-title-container">
     <p>ECHO SENCE</p>
 </div>
-<div class="title-container">
-    <div class="title-name">Echo Sence</div>
+<div class="url-border">
+    <div class="url-container">
+        <form action="/analyze" method="post" class="url-form">
+            <label for="url-input" class="url-label">Enter YouTube URL:</label>
+            <input type="url" id="url-input" name="youtube_url" class="url-input" placeholder="Paste YouTube link here" required>
+            <button type="submit" class="url-submit-btn">Analyze</button>
+        </form>
+    </div>
 </div>
-<div class="circle-container">
-    <form class="circle-from" id="circle-from" method="post">
 
-        <!-- 第一圆 -->
-        <div class="circle circle-1">
-            <div class="text-overlay text-1"></div>
-        </div>
-
-        <!-- 第二圆 (重叠效果) -->
-        <div class="circle circle-2">
-            <div class="text-overlay text-2"></div>
-        </div>
-
-        <!-- 第三圆 -->
-        <div class="circle circle-3">
-            <div class="text-overlay text-3"></div>
-        </div>
-    </form>
-</div>
 {% endblock body %}
