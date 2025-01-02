@@ -57,11 +57,9 @@ ROOT_URLCONF = "Echo_Sence.urls"
 
 TEMPLATES = [
     {
+
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            # STATIC_PATH,
-            # os.path.join(STATIC_PATH, 'template'),
-            # os.path.join(STATIC_PATH, 'echo_sence'),
             BASE_DIR / "static" / "template",
             BASE_DIR / "static" / "Homepage",
             BASE_DIR / "static" / "Upload",

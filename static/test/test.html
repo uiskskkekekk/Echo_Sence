@@ -1,0 +1,36 @@
+{% extends "preload.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/test/css/test.css">
+{% endblock css %}
+
+{% block js %}
+<!-- <script src="/static/Homepage/js/homepage.js" async defer></script> -->
+{% endblock js %}
+
+{% block body %}
+<div class="circle-container">
+    <div class="circle title-name">
+        <h2>Echo Sence</h2>
+    </div>
+
+    <!-- 第一圆 -->
+    <div class="circle circle-1">
+        <div class="text-overlay text-1">Aspiring Artists</div>
+    </div>
+
+    <!-- 第二圆 (重叠效果) -->
+    <div class="circle circle-2">
+        <div class="text-overlay text-2">Reluxe</div>
+    </div>
+
+    <!-- 第三圆 -->
+    <div class="circle circle-3">
+        <div class="text-overlay text-3">Learn More</div>
+    </div>
+</div>
+{% endblock body %}

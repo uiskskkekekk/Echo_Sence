@@ -1,0 +1,45 @@
+{% extends "preload.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/Homepage/css/homepage.css">
+{% endblock css %}
+
+{% block js %}
+<!-- <script src="/static/Homepage/js/homepage.js" async defer></script> -->
+{% endblock js %}
+
+{% block body %}
+<div class="background-title-container">
+    <p>ECHO SENCE</p>
+</div>
+<div class="title-container">
+    <div class="title-name">Echo Sence</div>
+</div>
+<div class="parent-container">
+    <div class="circle-container">
+        <form class="circle-from" id="circle-from" method="post">
+    
+            <!-- 第一圆 -->
+            <div class="circle circle-1">
+                <div class="description-icon"><ion-icon name="flash-outline"></ion-icon></div>
+                <!-- <img src="./assets/audio-lines.svg" class="description-svg"> -->
+                <div class="description">Echo Sense transforms the way you experience music by diving deep into its characteristics to find the perfect match for your taste.</div>
+            </div>
+    
+            <!-- 第二圆 (重叠效果) -->
+            <div class="circle circle-2"></div>
+    
+            <!-- 第三圆 -->
+            <div class="circle circle-3"></div>
+        </form>
+    </div>
+    <div class="button-container">
+        <a href="/upload" class="btn">Start</a>
+    </div>
+</div>
+
+{% endblock body %}
