@@ -3,9 +3,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 class MusicSimilarityComparator:
-    def compare(self, target_id: int):
+    def compare(self, target_id: str):
         target_music = Music.objects.filter(music_id=target_id).values().first()
         musics = Music.objects.exclude(music_id=target_id).values()
+
+        print(target_music, musics)
 
         similarities = []
         target_features = np.array(target_music.get("features"), dtype=np.float32).reshape(1, -1)
