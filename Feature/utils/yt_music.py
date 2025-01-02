@@ -78,7 +78,6 @@ class Downloader:
         }
         try:
             with yt_dlp.YoutubeDL(opts) as ydl:
-                # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
                 info = ydl.extract_info(yt_link, False)
                 return cls._get_music_info(info)
         except Exception as e:
@@ -126,6 +125,7 @@ class Downloader:
         
     @classmethod
     def _get_music_info(cls, info: dict):
+        # https://github.com/ytdl-org/youtube-dl?tab=readme-ov-file#output-template
         video_id = info.get("id")
         ts = info.get("timestamp")
         dt = datetime.fromtimestamp(ts) if ts is not None else None
@@ -136,6 +136,7 @@ class Downloader:
             "author": info.get("uploader"),
             "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
             "preview_url": info.get("url"),
+            "cover_url": f"https://i.ytimg.com/vi/{video_id}/hq720.jpg",
             "upload_time": dt,
             "upload_timestamp": info.get("timestamp"),
             "view_count": info.get("view_count"),
