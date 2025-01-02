@@ -29,7 +29,7 @@ class Artist(models.Model):
         return cls.objects.get(artist_id=artist_id)
 
 class Music(models.Model):
-    music_id = models.AutoField(primary_key=True)
+    music_id = models.CharField(primary_key=True, max_length=20)
     title = models.CharField(max_length=20, blank=True, null=True)
     rating = models.IntegerField(default=0, null=True)
     outer_url = models.URLField(max_length=500, blank=True, null=True)
@@ -44,11 +44,12 @@ class Music(models.Model):
         db_table = 'music'
 
     @classmethod
-    def upload_music(cls, title, outer_url, category_id, artist_id, features):
+    def upload_music(cls, music_id, title, outer_url, category_id, artist_id, features):
         category = Category.get_category(category_id=1)
         artist = Artist.get_category(artist_id=1)
 
         music = cls.objects.create(
+            music_id = music_id,
             title = title,
             outer_url = outer_url,
             category_id = category,
@@ -57,3 +58,7 @@ class Music(models.Model):
         )
 
         return music.music_id
+    
+    @classmethod
+    def check_exists(cls, music_id):
+        return cls.objects.filter(music_id=music_id).exists()
