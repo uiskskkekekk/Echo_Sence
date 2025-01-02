@@ -64,6 +64,7 @@ TEMPLATES = [
             BASE_DIR / "static" / "template",
             BASE_DIR / "static" / "Homepage",
             BASE_DIR / "static" / "Upload",
+            BASE_DIR / "static" / "Analyze",
 		],
 
         'APP_DIRS': True,

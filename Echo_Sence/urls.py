@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     # path('', views.index, name='index'),
     path("", include("Homepage.urls")),
-    path("upload/", include("Upload.urls"),)
+    path("upload/", include("Upload.urls")),
+    path("analyze/", include("Analyze.urls")),
 ]
