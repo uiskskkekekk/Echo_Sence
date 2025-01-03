@@ -31,17 +31,17 @@ def upload_music(request: HttpRequest):
     id = info.get('id')
 
     music = Music.get_music_from_id(id)
-    if music is not None: return JsonResponse({"data": music.music_id})
+    if music is not None: return JsonResponse({"data": music})
 
     url = request.build_absolute_uri(reverse('feature'))
     response = requests.post(url, data=data)
     features = response.json().get('data')
 
     try:
-        music_id = Music.upload_music(info=info, features=features)
-        if music_id is None:
+        music = Music.upload_music(info=info, features=features)
+        if music is None:
             return JsonResponse({"error": "Music upload failed due to an unknown error."}, status=500)
-        return JsonResponse({"data": music_id})
+        return JsonResponse({"data": music})
     except Exception as e:
         error_id = uuid4()
         logger.error(f"{str(e)} ({error_id})")
