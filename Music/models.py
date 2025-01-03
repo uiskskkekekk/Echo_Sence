@@ -67,27 +67,27 @@ class Music(models.Model):
             features = features
         )
 
-        music_artist = cls.get_music_from_id(music_id)
-        return music_artist
+        return model_to_dict(music)
     
     @classmethod
     def get_music_from_id(cls, music_id):
         music = cls.objects.select_related('artist').filter(music_id=music_id)
-        music_data = music.values('music_id', 'title', 'youtube_url', 'cover_url', 'preview_url', 'artist_id', 'artist__name', 'view_count', 'like_count', 'features').first()
-        formatted_data = {
-            'music_id': music_data.get('music_id'),
-            'title': music_data.get('title'),
-            'youtube_url': music_data.get('youtube_url'),
-            'cover_url': music_data.get('cover_url'),
-            'preview_url': music_data.get('preview_url'),
-            'artist_id': music_data.get('artist_id'),
-            'artist_name': music_data.get('artist__name'),
-            'view_count': music_data.get('view_count'),
-            'like_count': music_data.get('like_count'),
-            'features': music_data.get('features'),
-        }
+        if music:
+            music_data = music.values('music_id', 'title', 'youtube_url', 'cover_url', 'preview_url', 'artist_id', 'artist__name', 'view_count', 'like_count', 'features').first()
+            formatted_data = {
+                'music_id': music_data.get('music_id'),
+                'title': music_data.get('title'),
+                'youtube_url': music_data.get('youtube_url'),
+                'cover_url': music_data.get('cover_url'),
+                'preview_url': music_data.get('preview_url'),
+                'artist_id': music_data.get('artist_id'),
+                'artist_name': music_data.get('artist__name'),
+                'view_count': music_data.get('view_count'),
+                'like_count': music_data.get('like_count'),
+                'features': music_data.get('features'),
+            }
 
-        return formatted_data
+            return formatted_data
     
     @classmethod
     def get_all_music_exclude_id(cls, music_id):
