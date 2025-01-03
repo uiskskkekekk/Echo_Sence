@@ -136,7 +136,7 @@ class Downloader:
             "author": info.get("uploader"),
             "youtube_url": f"https://www.youtube.com/watch?v={video_id}" if video_id is not None else None,
             "preview_url": info.get("url"),
-            "cover_url": f"https://i.ytimg.com/vi/{video_id}/hq720.jpg",
+            "cover_url": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
             "upload_time": dt,
             "upload_timestamp": info.get("timestamp"),
             "view_count": info.get("view_count"),
