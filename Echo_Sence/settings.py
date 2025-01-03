@@ -153,10 +153,12 @@ LOGGING = {
     "handlers": {
         "console": {"class": "logging.StreamHandler", "formatter": "simple"},
         "file": {
-            "class": "logging.FileHandler",
+            "class": "logging.handlers.RotatingFileHandler",
             "filename": "debug.log",
             "formatter": "verbose",
             "encoding": "utf-8",
+            'maxBytes': 1024 * 10,  # 文件大小限制，10 KB 作為測試
+            'backupCount': 5       # 保留的文件數量
         },
     },
     "loggers": {
