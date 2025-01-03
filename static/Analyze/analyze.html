@@ -1,0 +1,36 @@
+{% extends "preload.html" %}
+
+{% block title %}
+Result
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/Analyze/css/analyze.css">
+{% endblock css %}
+
+{% block js %}
+<script src="/static/Analyze/js/analyze.js" async defer></script>
+{% endblock js %}
+
+{% block body %}
+<div class="background-title-container">
+    <p>ECHO SENCE</p>
+</div>
+<div class="analysis-container">
+    <div class="music-section">
+        <h2>YOUR MUSIC:</h2>
+        <div class="your-music">
+            <p>Analyzing music ...</p>
+        </div>
+    </div>
+
+    <div class="similar-section">
+        <h2>SIMILAR MUSIC:</h2>
+        <div class="scroll-wrapper">
+            <div class="similar-music"></div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

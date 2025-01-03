@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "music_id": "jpqV3dzYOgk",
+      "title": "Zootopia - Try Everything (Lyrics, Shakira)",
+      "outer_url": "https://www.youtube.com/watch?v=jpqV3dzYOgk",
+    },
+    {
+      "music_id": "SlPhMPnQ58k",
+      "title": "Maroon 5 - Memories (Official Video)",
+      "outer_url": "https://www.youtube.com/watch?v=SlPhMPnQ58k",
+    }
+  ],
+  "info": {
+    "title": "Justin Bieber - Ghost",
+    "author": "LatinHype",
+    "youtube_url": "https://www.youtube.com/watch?v=p6U7zIY6zkA",
+    "preview_url": "https://rr2---sn-ipoxu-3iid.googlevideo.com/videoplayback?expire=1735850977&ei=gad2Z9SkB7bW1d8P4-Gy4Qs&ip=2001%3Ab011%3Ae601%3A5c96%3A4ae%3Aac64%3A2bc1%3A214c&id=o-AP9if4HCHrV-Jz70o9Z-ykk1ivUkhW3OkWbgR9H9cqST&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1735829377%2C&mh=xq&mm=31%2C29&mn=sn-ipoxu-3iid%2Csn-un57ene6&ms=au%2Crdu&mv=m&mvi=2&pcm2cms=yes&pl=52&rms=au%2Cau&initcwndbps=3357500&bui=AfMhrI8ggsQK802eHZfFEh7x3CIbx-WJxRIR60gJ8yL1-FM3gYXgUsqpWe4TX0JyKXQ0yL4ze7ItY7Dk&spc=x-caUNNOFtV-U19dGjsifCRioeDaBT86tZSsut6qpZOF7WIrbDTP&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=2484042&dur=153.437&lmt=1726258465907432&mt=1735828873&fvip=4&keepalive=yes&fexp=51326932%2C51335594%2C51371294&c=IOS&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgZXHsmBmIMZJRSJgx5CmBAHmpjjxq0kRUSb0akKcI4hICIQD2lZbqF6U9lmH_9e3XXMFt7x4fdRWHK0HzIw0GV4jIXg%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIgbFhbrvdEg70hxCUG6RppjfpOQwlK7j9t9iXOm4_DnIgCIQD74PPRD2zeeVct_Hc5tkXqxarLnkN_DldkwQ1bZoUVHg%3D%3D",
+    "upload_time": "2021-12-10T02:17:56",
+    "view_count": 39395071,
+    "like_count": 274379
+  }
+}
