@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
             yt_link: youtubeUrl,
         }
 
+        const loading = document.createElement("div");
+        loading.innerHTML = "Loading...";
 
         $.ajax({
             url: "http://127.0.0.1:8000/music/upload_music",
