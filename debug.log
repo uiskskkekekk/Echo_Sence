@@ -372,3 +372,9 @@
 2025-01-03 02:36:59,286 | [INFO] Feature.yt_music: Done! Output path: C:\Echo_Sence\data\music\temp\Yy1LMK7LLEs.mp3
 2025-01-03 02:36:59,287 | [INFO] Feature.yt_music: Remove file: C:\Echo_Sence\data\music\temp\Yy1LMK7LLEs.mp3
 2025-01-03 02:36:59,288 | [INFO] Feature.yt_music: Done!
+2025-01-03 10:54:39,579 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 10:54:39,580 | [INFO] Feature.yt_music: Title: Maroon 5 - Payphone ft. Wiz Khalifa (Explicit) (Official Music Video)
+2025-01-03 10:54:39,582 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 10:54:41,268 | [INFO] Feature.yt_music: Done! Output path: C:\Echo_Sence\static\feature\runtime\KRaWnd3LJfs.mp3
+2025-01-03 10:54:41,268 | [INFO] Feature.yt_music: Remove file: C:\Echo_Sence\static\feature\runtime\KRaWnd3LJfs.mp3
+2025-01-03 10:54:41,269 | [INFO] Feature.yt_music: Done!
