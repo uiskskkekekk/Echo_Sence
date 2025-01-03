@@ -506,3 +506,39 @@
 2025-01-03 13:29:56,406 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\j7CDb610Bg0.mp3
 2025-01-03 13:29:56,407 | [INFO] Feature.yt_music: Done!
 2025-01-03 13:29:56,823 | [ERROR] Feature.views: UNIQUE constraint failed: artist.artist_id (d7114fef-d9c8-40e7-8cf9-3714e846bf81)
+2025-01-03 13:58:57,291 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 13:58:57,293 | [INFO] Feature.yt_music: Title: Coldplay-everglow永恆璀燦 中文字幕
+2025-01-03 13:58:57,294 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 13:58:58,351 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\CNod7jfmT1k.mp3
+2025-01-03 13:58:58,351 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\CNod7jfmT1k.mp3
+2025-01-03 13:58:58,352 | [INFO] Feature.yt_music: Done!
+2025-01-03 13:59:38,089 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 13:59:38,090 | [INFO] Feature.yt_music: Title: 【Kanaria】レクイエム【星街すいせい】
+2025-01-03 13:59:38,091 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 13:59:39,343 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\5Jja39-69G8.mp3
+2025-01-03 13:59:39,346 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\5Jja39-69G8.mp3
+2025-01-03 13:59:39,349 | [INFO] Feature.yt_music: Done!
+2025-01-03 13:59:53,869 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 13:59:53,870 | [INFO] Feature.yt_music: Title: オーバーライド - 重音テトSV[吉田夜世]
+2025-01-03 13:59:53,871 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 13:59:55,166 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\LLjfal8jCYI.mp3
+2025-01-03 13:59:55,167 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\LLjfal8jCYI.mp3
+2025-01-03 13:59:55,169 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:00:10,778 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:00:10,778 | [INFO] Feature.yt_music: Title: 【GUMI】Dec.【Kanaria】
+2025-01-03 14:00:10,779 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:00:12,623 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\9xbT8OZcDJQ.mp3
+2025-01-03 14:00:12,625 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\9xbT8OZcDJQ.mp3
+2025-01-03 14:00:12,628 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:00:30,395 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:00:30,396 | [INFO] Feature.yt_music: Title: 怒鳴り傷 -可不
+2025-01-03 14:00:30,397 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:00:31,426 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\gERyKqM5Gvs.mp3
+2025-01-03 14:00:31,426 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\gERyKqM5Gvs.mp3
+2025-01-03 14:00:31,428 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:00:57,313 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:00:57,314 | [INFO] Feature.yt_music: Title: はいよろこんで（第75回 NHK紅白歌合戦 歌唱曲） / こっちのけんと MV
+2025-01-03 14:00:57,314 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:00:58,394 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\jzi6RNVEOtA.mp3
+2025-01-03 14:00:58,395 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\jzi6RNVEOtA.mp3
+2025-01-03 14:00:58,396 | [INFO] Feature.yt_music: Done!

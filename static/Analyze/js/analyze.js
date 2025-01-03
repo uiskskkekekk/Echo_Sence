@@ -31,7 +31,7 @@ $.ajax({
                 </div>
                 <div class="music-info">
                     <p><strong>${originalMusic.title}</strong></p>
-                    <p>${originalMusic.author}</p>
+                    <p>${originalMusic.artist_name}</p>
                     <p>URL: <a href="${originalMusic.youtube_url}" target="_blank">${originalMusic.youtube_url}</a></p>
                 </div>
             `;
@@ -51,7 +51,7 @@ $.ajax({
                         </div>
                         <div class="music-info">
                             <p><strong>${music.title}</strong></p>
-                            <p>${music.author}</p>
+                            <p>${music.artist_name}</p>
                             <p>URL: <a href="${music.youtube_url}" target="_blank">${music.youtube_url}</a></p>
                         </div>
                         <div class="music-control">
