@@ -603,3 +603,75 @@
 2025-01-03 14:29:59,174 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\eZuDklxsaRg.mp3
 2025-01-03 14:29:59,174 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\eZuDklxsaRg.mp3
 2025-01-03 14:29:59,174 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:48:38,175 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:48:38,175 | [INFO] Feature.yt_music: Title: Maroon 5 - Payphone ft. Wiz Khalifa (Explicit) (Official Music Video)
+2025-01-03 14:48:38,176 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:48:39,154 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\KRaWnd3LJfs.mp3
+2025-01-03 14:48:39,154 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\KRaWnd3LJfs.mp3
+2025-01-03 14:48:39,156 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:49:04,678 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:49:04,679 | [INFO] Feature.yt_music: Title: 【GUMI】Dec.【Kanaria】
+2025-01-03 14:49:04,679 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:49:05,759 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\9xbT8OZcDJQ.mp3
+2025-01-03 14:49:05,760 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\9xbT8OZcDJQ.mp3
+2025-01-03 14:49:05,761 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:49:23,118 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:49:23,119 | [INFO] Feature.yt_music: Title: 怒鳴り傷 -可不
+2025-01-03 14:49:23,119 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:49:24,384 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\gERyKqM5Gvs.mp3
+2025-01-03 14:49:24,384 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\gERyKqM5Gvs.mp3
+2025-01-03 14:49:24,386 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:50:12,526 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:50:12,527 | [INFO] Feature.yt_music: Title: LADYBABY "ニッポン饅頭 / Nippon manju "Music Clip
+2025-01-03 14:50:12,527 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:50:13,748 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\M8-vje-bq9c.mp3
+2025-01-03 14:50:13,750 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\M8-vje-bq9c.mp3
+2025-01-03 14:50:13,751 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:50:54,374 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:50:54,374 | [INFO] Feature.yt_music: Title: YOASOBI「UNDEAD」 Official Music Video／『〈物語〉シリーズ オフ&モンスターシーズン』主題歌
+2025-01-03 14:50:54,375 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:50:55,903 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\Jj1_mfUzjOs.mp3
+2025-01-03 14:50:55,903 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\Jj1_mfUzjOs.mp3
+2025-01-03 14:50:55,905 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:51:07,125 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:51:07,125 | [INFO] Feature.yt_music: Title: YOASOBI「勇者」 Official Music Video／TVアニメ『葬送のフリーレン』オープニングテーマ
+2025-01-03 14:51:07,126 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:51:08,317 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\OIBODIPC_8Y.mp3
+2025-01-03 14:51:08,317 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\OIBODIPC_8Y.mp3
+2025-01-03 14:51:08,317 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:51:19,799 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:51:19,799 | [INFO] Feature.yt_music: Title: 【Ado】 神っぽいな 歌いました
+2025-01-03 14:51:19,799 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:51:20,793 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\7i_nc5GGIsI.mp3
+2025-01-03 14:51:20,793 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\7i_nc5GGIsI.mp3
+2025-01-03 14:51:20,794 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:51:40,871 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:51:40,872 | [INFO] Feature.yt_music: Title: tuki.『晩餐歌』Official Music Video
+2025-01-03 14:51:40,873 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:51:42,026 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\oZpYEEcvu5I.mp3
+2025-01-03 14:51:42,026 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\oZpYEEcvu5I.mp3
+2025-01-03 14:51:42,027 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:55:13,814 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 14:55:13,815 | [INFO] Feature.yt_music: Title: 命に嫌われている。／まふまふ【歌ってみた】
+2025-01-03 14:55:13,816 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 14:55:14,876 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\eq8r1ZTma08.mp3
+2025-01-03 14:55:14,877 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\eq8r1ZTma08.mp3
+2025-01-03 14:55:14,877 | [INFO] Feature.yt_music: Done!
+2025-01-03 14:59:38,557 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=oZpYEEcvu5I&list=RDoZpYEEcvu5I&start_radio=1&rv=oZpYEEcvu5I
+2025-01-03 15:00:45,157 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=oZpYEEcvu5I&list=RDoZpYEEcvu5I&start_radio=1&rv=oZpYEEcvu5I
+2025-01-03 15:00:45,162 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=oZpYEEcvu5I&list=RDoZpYEEcvu5I&start_radio=1&rv=oZpYEEcvu5I
+2025-01-03 15:01:38,898 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=oZpYEEcvu5I&list=RDoZpYEEcvu5I&start_radio=1&rv=oZpYEEcvu5I
+2025-01-03 15:08:37,535 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=QjrkrVmC-8M
+2025-01-03 15:08:39,457 | [ERROR] Feature.views: 'paths' (e793f414-b955-454c-bd82-dab56cd8c180)
+2025-01-03 15:08:39,468 | [ERROR] Feature.views: NOT NULL constraint failed: music.features (00a033af-ee89-4b18-a175-b9b6810adb47)
+2025-01-03 15:08:47,981 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=QjrkrVmC-8M
+2025-01-03 15:08:49,893 | [ERROR] Feature.views: 'paths' (52f40759-b312-4701-9602-49ed1e9a9980)
+2025-01-03 15:08:49,902 | [ERROR] Feature.views: NOT NULL constraint failed: music.features (fa7386d4-268d-4fba-a6cf-c02f564039eb)
+2025-01-03 15:10:53,477 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=QjrkrVmC-8M
+2025-01-03 15:10:57,460 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 15:10:57,462 | [INFO] Feature.yt_music: Title: Mrs. GREEN APPLE「ライラック」Official Music Video
+2025-01-03 15:10:57,468 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 15:10:58,808 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\QjrkrVmC-8M.mp3
+2025-01-03 15:10:58,808 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\QjrkrVmC-8M.mp3
+2025-01-03 15:10:58,809 | [INFO] Feature.yt_music: Done!
+2025-01-03 15:13:50,222 | [INFO] Feature.views: Received link: https://www.youtube.com/watch?v=QjrkrVmC-8M&list=RDoZpYEEcvu5I&index=3
