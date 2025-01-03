@@ -21,11 +21,19 @@ body {
     /* color: #d48e00; */
 }
 
-.url-container {
+.upload-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(23%);
+}
+
+.url-container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #121212;
     border: 5px solid #d48e00;
     border-radius: 50px;
@@ -36,7 +44,8 @@ body {
     padding-bottom: 3px;
     z-index: 10;
     transform: translateY(-45%);
-    box-shadow: 0 0 0 15px #121212; /* 模擬外層白色邊框 */
+    box-shadow: 0 0 0 15px #121212;
+    /* 模擬外層白色邊框 */
 }
 
 .url-form {
@@ -54,7 +63,8 @@ body {
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    white-space: nowrap; /* 禁止換行 */
+    white-space: nowrap;
+    /* 禁止換行 */
 }
 
 .url-input {
@@ -85,4 +95,25 @@ body {
 
 .url-submit-btn:hover {
     background-color: #f2a300;
+}
+
+.loading-mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 10vw;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-size: cover;
+    margin-top: 20px;
+    /* transform: translateY(150%); */
+}
+
+.loading-container {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/spinning-dots.svg');
+    background-size: cover;
 }

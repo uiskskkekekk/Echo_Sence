@@ -7,22 +7,3 @@
 body {
     min-height: 100vh;
 }
-
-.loading-mask {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 10000;
-    background-color: white;
-    opacity: 1;
-    transition: all 0.2s;
-}
-
-.loading-mask.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
