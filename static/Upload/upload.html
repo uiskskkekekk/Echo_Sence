@@ -1,0 +1,27 @@
+{% extends "preload.html" %}
+
+{% block title %}
+Upload
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/Upload/css/upload.css">
+{% endblock css %}
+
+{% block js %}
+<script src="/static/Upload/js/upload.js" async defer></script>
+{% endblock js %}
+
+{% block body %}
+<div class="background-title-container">
+    <p>ECHO SENCE</p>
+</div>
+<div class="url-container">
+    <form action="/analyze" method="post" class="url-form">
+        <label for="url-input" class="url-label">Enter YouTube URL:</label>
+        <input type="url" id="url-input" name="youtube_url" class="url-input" placeholder="Paste YouTube link here" required>
+        <button type="submit" class="url-submit-btn">Analyze</button>
+    </form>
+</div>
+
+{% endblock body %}
