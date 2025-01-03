@@ -67,7 +67,7 @@ def get_similiar_musics(request: HttpRequest):
         res = msc.compare(music.get('music_id'))
         if res is None:
             return JsonResponse({"error": "Music similarity comparison failed due to an unknown error."}, status=500)
-        return JsonResponse({"original data": music, "data": res})
+        return JsonResponse({"original_data": music, "data": res})
     except Exception as e:
         error_id = uuid4()
         logger.error(f"{str(e)} ({error_id})")
