@@ -7,7 +7,7 @@ class MusicSimilarityComparator:
         target_music = Music.objects.filter(music_id=target_id).values().first()
         musics = Music.get_all_music_exclude_id(target_id)
 
-        print(target_music, musics)
+        # print(target_music, musics)
 
         similarities = []
         target_features = np.array(target_music.get("features"), dtype=np.float32).reshape(1, -1)

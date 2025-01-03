@@ -12,36 +12,44 @@ logger = logging.getLogger("Feature")
 # https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#embedding-examples
 
 class Downloader:
+    download_range = [30.0, 60.0]
+    no_warnings = True
+    no_progress = True
+    no_playlist = True
+    
+    download_opts = {
+        'format': 'm4a/bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'm4a',
+        }],
+        'paths': {
+            'home': ""
+        },
+        'outtmpl': {
+            'default': '%(id)s.%(ext)s'
+        },
+        'quite': True,
+        'download_ranges': yt_dlp.utils.download_range_func(
+            [], 
+            [download_range]
+        ),
+        'no_warnings': no_warnings,
+        'no_progress': no_progress,
+        'noplaylist': no_playlist
+    }
+    
     @classmethod
     def download(cls, url, to=None, quiet=False):
         home = './data/music/temp' if to is None else os.path.join(to, "temp")
-        opts = {
-            'format': 'm4a/bestaudio/best',
-            'postprocessors': [{
-                'key': 'FFmpegExtractAudio',
-                'preferredcodec': 'm4a',
-            }],
-            'paths': {
-                'home': home
-            },
-            'outtmpl': {
-                'default': '%(id)s.%(ext)s'
-            },
-            'quiet': quiet,
-            'download_ranges': yt_dlp.utils.download_range_func(
-                [], 
-                [[0.0, 30.0]]
-            ),
-            'no_warnings': True,
-            'no_progress': True,
-            'noplaylist': True
-        }
+        cls.download_opts['paths']['home'] = home
+        cls.download_opts['quiet'] = quiet
         try:
-            with yt_dlp.YoutubeDL(opts) as ydl:
+            with yt_dlp.YoutubeDL(cls.download_opts) as ydl:
                 info = ydl.extract_info(url, download=True)
                 logger.info("Downloading music...")
                 logger.info(f"Title: {info.get('title')}")
-                filepath = ydl.prepare_filename(info, outtmpl=opts['outtmpl']['default'])
+                filepath = ydl.prepare_filename(info, outtmpl=cls.download_opts['outtmpl']['default'])
                 abspath = os.path.abspath(filepath)
                 if to is None:
                     to = os.path.dirname(abspath)
@@ -60,10 +68,9 @@ class Downloader:
         output_path = os.path.join(output_path, filename)
         
         audio.export(output_path, format="mp3")
-        logger.info(f"Done! Output path: {os.path.abspath(output_path)}")
-        logger.info(f"Remove file: {os.path.abspath(output_path)}")
+        logger.info(f"Output path: {os.path.abspath(output_path)}")
         os.remove(input_file)
-        logger.info("Done!")
+        logger.info(f"Remove file: {os.path.abspath(output_path)}")
         return output_path
     
     @classmethod
@@ -74,7 +81,8 @@ class Downloader:
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'm4a',
             }],
-            'quiet': True
+            'quiet': True,
+            'noplaylist': cls.no_playlist
         }
         try:
             with yt_dlp.YoutubeDL(opts) as ydl:
@@ -86,33 +94,14 @@ class Downloader:
     @classmethod
     def get_full_data(cls, url, to=None, quiet=False):
         home = './data/music/temp' if to is None else os.path.join(to, "temp")
-        opts = {
-            'format': 'm4a/bestaudio/best',
-            'postprocessors': [{
-                'key': 'FFmpegExtractAudio',
-                'preferredcodec': 'm4a',
-            }],
-            'paths': {
-                'home': home
-            },
-            'outtmpl': {
-                'default': '%(id)s.%(ext)s'
-            },
-            'quiet': quiet,
-            'download_ranges': yt_dlp.utils.download_range_func(
-                [], 
-                [[0.0, 30.0]]
-            ),
-            'no_warnings': True,
-            'no_progress': True,
-            'noplaylist': True
-        }
+        cls.download_opts['paths']['home'] = home
+        cls.download_opts['quiet'] = quiet
         try:
-            with yt_dlp.YoutubeDL(opts) as ydl:
+            with yt_dlp.YoutubeDL(cls.download_opts) as ydl:
                 info = ydl.extract_info(url, download=True)
                 logger.info("Downloading music...")
                 logger.info(f"Title: {info.get('title')}")
-                filepath = ydl.prepare_filename(info, outtmpl=opts['outtmpl']['default'])
+                filepath = ydl.prepare_filename(info, outtmpl=cls.download_opts['outtmpl']['default'])
                 abspath = os.path.abspath(filepath)
                 if to is None:
                     to = os.path.dirname(abspath)

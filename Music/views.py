@@ -24,6 +24,7 @@ def upload_music(request: HttpRequest):
         return JsonResponse({"error": "The 'yt_link' field is missing."}, status=400)
 
     data = {"yt_link": yt_link}
+    logger.info(f"Received link: {yt_link}")
     
     url = request.build_absolute_uri(reverse('info'))
     response = requests.post(url, data=data)
