@@ -67,8 +67,46 @@ class Music(models.Model):
             features = features
         )
 
-        return model_to_dict(music)
+        music_artist = cls.get_music_from_id(music_id)
+        return music_artist
     
     @classmethod
     def get_music_from_id(cls, music_id):
-        return cls.objects.filter(music_id=music_id).values().first()
+        music = cls.objects.select_related('artist').filter(music_id=music_id)
+        music_data = music.values('music_id', 'title', 'youtube_url', 'cover_url', 'preview_url', 'artist_id', 'artist__name', 'view_count', 'like_count', 'features').first()
+        formatted_data = {
+            'music_id': music_data.get('music_id'),
+            'title': music_data.get('title'),
+            'youtube_url': music_data.get('youtube_url'),
+            'cover_url': music_data.get('cover_url'),
+            'preview_url': music_data.get('preview_url'),
+            'artist_id': music_data.get('artist_id'),
+            'artist_name': music_data.get('artist__name'),
+            'view_count': music_data.get('view_count'),
+            'like_count': music_data.get('like_count'),
+            'features': music_data.get('features'),
+        }
+
+        return formatted_data
+    
+    @classmethod
+    def get_all_music_exclude_id(cls, music_id):
+        music = cls.objects.select_related('artist').exclude(music_id=music_id)
+        music_data = music.values('music_id', 'title', 'youtube_url', 'cover_url', 'preview_url', 'artist_id', 'artist__name', 'view_count', 'like_count', 'features')
+        formatted_data = [
+            {
+                'music_id': item.get('music_id'),
+                'title': item.get('title'),
+                'youtube_url': item.get('youtube_url'),
+                'cover_url': item.get('cover_url'),
+                'preview_url': item.get('preview_url'),
+                'artist_id': item.get('artist_id'),
+                'artist_name': item.get('artist__name'),
+                'view_count': item.get('view_count'),
+                'like_count': item.get('like_count'),
+                'features': item.get('features'),
+            }
+            for item in music_data
+        ]
+
+        return formatted_data
