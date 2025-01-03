@@ -16,6 +16,7 @@ $.ajax({
 
         // 清空現有的相似音樂區域
         const MusicContainer = document.querySelector('.music-section .your-music')
+        MusicContainer.innerHTML = "";
         const similarMusicContainer = document.querySelector('.similar-section .similar-music');
 
         if (res.original_info) {
