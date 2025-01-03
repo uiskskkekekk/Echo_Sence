@@ -110,4 +110,4 @@ class Music(models.Model):
         ]
 
         return formatted_data
-        return cls.objects.filter(music_id=music_id).values().first()
+        # return cls.objects.filter(music_id=music_id).values().first()
