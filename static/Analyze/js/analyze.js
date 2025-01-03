@@ -19,8 +19,8 @@ $.ajax({
         MusicContainer.innerHTML = "";
         const similarMusicContainer = document.querySelector('.similar-section .similar-music');
 
-        if (res.original_info) {
-            const originalMusic = res.original_info
+        if (res.original_data) {
+            const originalMusic = res.original_data
             const musicItem = document.createElement('div');
             musicItem.classList.add('music-item');
 
@@ -39,7 +39,7 @@ $.ajax({
             MusicContainer.appendChild(musicItem);
         }
 
-        res.info.forEach((music) => {
+        res.data.forEach((music) => {
             // 創建音樂項目元素
             const musicItem = document.createElement('div');
             musicItem.classList.add('music-item');
@@ -54,7 +54,13 @@ $.ajax({
                             <p>${music.author}</p>
                             <p>URL: <a href="${music.youtube_url}" target="_blank">${music.youtube_url}</a></p>
                         </div>
-                    `;
+                        <div class="music-control">
+                            <audio controls>
+                                <source src="${music.preview_url}" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                `;
 
             // 將新創建的音樂項目加入到相似音樂容器中
             similarMusicContainer.appendChild(musicItem);

@@ -85,7 +85,7 @@ def get_similiar_musics(request: HttpRequest):
                 },
                 status=500,
             )
-        return JsonResponse({"original data": music, "data": res})
+        return JsonResponse({"original_data": music, "data": res})
     except Exception as e:
         error_id = uuid4()
         logger.error(f"{str(e)} ({error_id})")
