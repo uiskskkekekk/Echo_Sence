@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Manager
+from django.forms.models import model_to_dict
 
 class Artist(models.Model):
     artist_id = models.CharField(max_length=20, primary_key=True)
@@ -66,8 +67,8 @@ class Music(models.Model):
             features = features
         )
 
-        return music.music_id
+        return model_to_dict(music)
     
     @classmethod
-    def get_music_from_id(cls, music_id) -> "Music":
+    def get_music_from_id(cls, music_id):
         return cls.objects.filter(music_id=music_id).values().first()
