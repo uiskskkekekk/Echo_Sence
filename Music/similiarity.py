@@ -5,7 +5,7 @@ import numpy as np
 class MusicSimilarityComparator:
     def compare(self, target_id: str):
         target_music = Music.objects.filter(music_id=target_id).values().first()
-        musics = Music.get_all_music_exclude_id(target_id)
+        musics = Music.objects.exclude(music_id=target_id).values()
 
         print(target_music, musics)
 
