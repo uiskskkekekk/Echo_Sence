@@ -493,3 +493,16 @@
 2025-01-03 12:21:08,876 | [INFO] Feature.yt_music: Done! Output path: C:\Echo_Sence\static\feature\runtime\aatr_2MstrI.mp3
 2025-01-03 12:21:08,877 | [INFO] Feature.yt_music: Remove file: C:\Echo_Sence\static\feature\runtime\aatr_2MstrI.mp3
 2025-01-03 12:21:08,879 | [INFO] Feature.yt_music: Done!
+2025-01-03 13:28:39,483 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 13:28:39,484 | [INFO] Feature.yt_music: Title: BUMP OF CHICKEN「天体観測」
+2025-01-03 13:28:39,485 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 13:28:40,788 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\j7CDb610Bg0.mp3
+2025-01-03 13:28:40,788 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\j7CDb610Bg0.mp3
+2025-01-03 13:28:40,788 | [INFO] Feature.yt_music: Done!
+2025-01-03 13:29:54,845 | [INFO] Feature.yt_music: Downloading music...
+2025-01-03 13:29:54,846 | [INFO] Feature.yt_music: Title: BUMP OF CHICKEN「天体観測」
+2025-01-03 13:29:54,847 | [INFO] Feature.yt_music: Transform .m4a file to .mp3 file...
+2025-01-03 13:29:56,406 | [INFO] Feature.yt_music: Done! Output path: d:\Code\Echo_Sence\static\feature\runtime\j7CDb610Bg0.mp3
+2025-01-03 13:29:56,406 | [INFO] Feature.yt_music: Remove file: d:\Code\Echo_Sence\static\feature\runtime\j7CDb610Bg0.mp3
+2025-01-03 13:29:56,407 | [INFO] Feature.yt_music: Done!
+2025-01-03 13:29:56,823 | [ERROR] Feature.views: UNIQUE constraint failed: artist.artist_id (d7114fef-d9c8-40e7-8cf9-3714e846bf81)
