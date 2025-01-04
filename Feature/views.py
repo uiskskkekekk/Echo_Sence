@@ -9,8 +9,10 @@ from .extractor import FeatureExtractor
 from .utils.check_helper import Checker
 from .utils.yt_music import Downloader
 
+encoder_name = "best"
+
 fe = FeatureExtractor(
-    encoder_path = "static/feature/models/best.h5",
+    encoder_path = f"static/feature/models/{encoder_name}.h5",
     runtime_dir = "static/feature/runtime"
 )
 
