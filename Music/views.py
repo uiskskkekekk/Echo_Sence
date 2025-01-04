@@ -21,10 +21,11 @@ def upload_music(request: HttpRequest):
     yt_link = request.POST.get('yt_link')
 
     if yt_link is None:
+        logger.warning("The 'yt_link' field is missing.")
         return JsonResponse({"error": "The 'yt_link' field is missing."}, status=400)
 
     data = {"yt_link": yt_link}
-    logger.info(f"Received link: {yt_link}")
+    logger.info(f"Request link: {yt_link}")
     
     url = request.build_absolute_uri(reverse('info'))
     response = requests.post(url, data=data)
@@ -32,13 +33,17 @@ def upload_music(request: HttpRequest):
     id = info.get('id')
 
     music = Music.get_music_from_id(id)
-    if music is not None: return JsonResponse({"data": music})
+    if music is not None: 
+        logger.info("Return data from DB")
+        return JsonResponse({"data": music})
 
+    logger.info("Extracting feature...")
     url = request.build_absolute_uri(reverse('feature'))
     response = requests.post(url, data=data)
     features = response.json().get('data')
 
     try:
+        logger.info("Creating data...")
         music = Music.upload_music(info=info, features=features)
         if music is None:
             return JsonResponse({"error": "Music upload failed due to an unknown error."}, status=500)

@@ -136,7 +136,7 @@ USE_L10N = True
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # logger settings
-
+LOG_DIR = os.path.join(BASE_DIR, 'static', 'logfiles')
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -154,11 +154,11 @@ LOGGING = {
         "console": {"class": "logging.StreamHandler", "formatter": "simple"},
         "file": {
             "class": "logging.handlers.RotatingFileHandler",
-            "filename": "debug.log",
+            "filename": os.path.join(LOG_DIR, 'debug.log'),
             "formatter": "verbose",
             "encoding": "utf-8",
-            'maxBytes': 1024 * 10,  # 文件大小限制，10 KB 作為測試
-            'backupCount': 5       # 保留的文件數量
+            # 'maxBytes': 1024 * 100,  # 文件大小限制，10 KB 作為測試
+            # 'backupCount': 5       # 保留的文件數量
         },
     },
     "loggers": {
