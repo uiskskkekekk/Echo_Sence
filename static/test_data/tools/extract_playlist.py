@@ -27,4 +27,4 @@ def main(url):
             json.dump(res, jfile, ensure_ascii=False, indent=4)
             
         
-main("https://www.youtube.com/playlist?list=PLiNIFt_GD2-DiggpSS51nmk3GpGIAY0RZ")
+main("https://www.youtube.com/watch?v=bB3-CUMERIU&list=PLO7-VO1D0_6MXmcpkq6zDLZB9h57H01KL&index=5")
