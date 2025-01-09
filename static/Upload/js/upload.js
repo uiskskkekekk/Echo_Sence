@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         LoadingContainer.appendChild(loading);
 
+        const button = document.querySelector('.url-submit-btn');
+        button.disabled = true;
+
         $.ajax({
             url: "http://127.0.0.1:8000/music/upload_music",
             method: "POST",
@@ -34,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             error: (res) => {
                 console.error("Error:", res);
+                button.disabled = false;
+                loading.classList.remove('loading-container');
+                alert("Invalid URL, please try again"); // 正確用法
             },
         })
     });
