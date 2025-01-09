@@ -13,6 +13,7 @@ encoder_name = "best"
 
 fe = FeatureExtractor(
     encoder_path = f"static/feature/models/{encoder_name}.h5",
+    scaler_path= "static/feature/scaler.pkl",
     runtime_dir = "static/feature/runtime"
 )
 

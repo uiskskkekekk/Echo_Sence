@@ -122,7 +122,9 @@ h2 {
 }
 
 .thumbnail-placeholder img {
-    width: 100%;
+    min-width: 180px;
+    max-width: 180px;
+    width: 180px;
     height: 100%;
     object-fit: cover;
 }
@@ -144,4 +146,8 @@ h2 {
 
 .music-info a:hover {
     text-decoration: underline;
+}
+
+.your-music > .music-item {
+    max-width: 600px;
 }
