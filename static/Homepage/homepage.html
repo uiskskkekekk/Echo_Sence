@@ -10,6 +10,7 @@ Homepage
 
 {% block js %}
 <!-- <script src="/static/Homepage/js/homepage.js" async defer></script> -->
+<script src="https://cdn.lottielab.com/s/lottie-player@1.x/player-web.min.js"></script>
 {% endblock js %}
 
 {% block body %}
@@ -22,17 +23,22 @@ Homepage
 <div class="parent-container">
     <div class="circle-container">
         <form class="circle-from" id="circle-from" method="post">
-    
+
             <!-- 第一圆 -->
             <div class="circle circle-1">
-                <div class="description-icon"><ion-icon name="flash-outline"></ion-icon></div>
+                <div class="description-icon">
+                    <lottie-player src="https://cdn.lottielab.com/l/CvyG1wSxkAi3Gf.json" loop autoplay
+                        style="width: 150px; height: 150px;"></lottie-player>
+                </div>
+                <!-- <div class="description-icon"><ion-icon name="flash-outline"></ion-icon></div> -->
                 <!-- <img src="./assets/audio-lines.svg" class="description-svg"> -->
-                <div class="description">Echo Sense transforms the way you experience music by diving deep into its characteristics to find the perfect match for your taste.</div>
+                <div class="description">Echo Sense transforms the way you experience music by diving deep into its
+                    characteristics to find the perfect match for your taste.</div>
             </div>
-    
+
             <!-- 第二圆 (重叠效果) -->
             <div class="circle circle-2"></div>
-    
+
             <!-- 第三圆 -->
             <div class="circle circle-3"></div>
         </form>

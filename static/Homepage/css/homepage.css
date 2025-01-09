@@ -117,12 +117,11 @@ body {
 }
 
 .description-icon {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    font-size: 2.5em;
-    width: 48px;
-    height: 48px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    transform: translate(27%, 10%);
+    /* 如果要在父元素中水平置中 */
 }
 
 .button-container {
