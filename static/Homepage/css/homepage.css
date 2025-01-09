@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .background-title-container {
@@ -52,6 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 2s ease-in-out;
 }
 
 .circle-container .circle-from {
@@ -65,7 +67,7 @@ body {
     width: 400px;
     height: 100%;
     border-radius: 50%;
-    border: 10px solid #121212;
+    border: 5px solid #121212;
     /* 添加邊框 */
     overflow: hidden;
     /* text-align: center; */
@@ -82,6 +84,7 @@ body {
 } */
 
 .circle-1 {
+    /* background-image: url('../assets/vinly-record-removebg-preview.png'); */
     background-color: #d48e00;
     top: 0;
     left: 0;
@@ -120,9 +123,16 @@ body {
     width: 150px;
     height: 150px;
     margin: 0 auto;
-    transform: translate(27%, 10%);
-    /* 如果要在父元素中水平置中 */
+    transform: translate(12%, -5%);
 }
+
+/* .description-icon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 2.5em;
+    z-index: 1000;
+} */
 
 .button-container {
     position: relative;
@@ -147,3 +157,10 @@ body {
     background-color: #ffffffc0;
     color: #d48e00;
 }
+
+/* 
+.vinyl-record {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+} */
