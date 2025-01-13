@@ -17,8 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
             yt_link: youtubeUrl,
         }
 
-        const loading = document.createElement("div");
-        loading.innerHTML = "Loading...";
+        const LoadingContainer = document.querySelector('.loading-mask');
+        const loading = document.createElement('div');
+        loading.classList.add('loading-container');
+
+        LoadingContainer.appendChild(loading);
+
+        const button = document.querySelector('.url-submit-btn');
+        button.disabled = true;
 
         $.ajax({
             url: "http://127.0.0.1:8000/music/upload_music",
@@ -31,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             error: (res) => {
                 console.error("Error:", res);
+                button.disabled = false;
+                loading.classList.remove('loading-container');
+                alert("Invalid URL, please try again"); // 正確用法
             },
         })
     });
